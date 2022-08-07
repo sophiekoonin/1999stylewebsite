@@ -6,6 +6,7 @@ Build for production: `yarn build`
 
 What to include:
 - semantic tags
+- wordart style header
 - gifs + reduced motion 
 - marquee
 - blink

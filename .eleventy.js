@@ -1,10 +1,20 @@
 // Filters
 const debugFilter = require('./src/filters/debug');
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
+
+const markdownItOptions = {
+  html: true,
+  breaks: true,
+  linkify: true,
+};
+const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 
 module.exports = (config) => {
   config.addWatchTarget('./src');
 
   config.addPassthroughCopy({ './src/static': '/' });
+  config.setLibrary('md', markdownLib);
 
   config.addFilter('debug', debugFilter);
 

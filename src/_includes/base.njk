@@ -30,10 +30,22 @@
       <h1>{{ title }}</h1>
     </header>
     <div class="page-wrapper">
-      <main class="wrapper">
-        {% block content %}
-          {{ content | safe }}
-        {% endblock %}
+      <aside class="sidebar">
+        <nav class="main-nav">
+          <ul role="list">
+            <li>Home</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="content">
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+        </div>
       </main>
     </div>
   </body>
