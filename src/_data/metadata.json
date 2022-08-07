@@ -1,8 +1,8 @@
 {
-  "title": "Eleventy Base",
-  "url": "https://example.com/",
+  "title": "State of the Browser 2022 - Sophie's Demo",
+  "url": "https://stateofthebrowser22.neocities.org",
   "domain": "example.com",
-  "description": "A description of this site.",
+  "description": "Sophie's noodlings for State of the Browser",
   "author": {
     "name": "Sophie Koonin",
     "email": "sophie@localghost.dev",
