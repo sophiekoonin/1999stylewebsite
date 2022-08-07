@@ -1,0 +1,11 @@
+{
+  "title": "Eleventy Base",
+  "url": "https://example.com/",
+  "domain": "example.com",
+  "description": "A description of this site.",
+  "author": {
+    "name": "Sophie Koonin",
+    "email": "sophie@localghost.dev",
+    "twitter_handle": "@type__error"
+  }
+}
