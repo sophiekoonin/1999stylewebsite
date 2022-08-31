@@ -2,7 +2,6 @@
   "dependencies": {
     "@11ty/eleventy": "1.0.1",
     "autoprefixer": "^10.4.2",
-    "concurrently": "7.0.0",
     "cssnano": "5.1.12",
     "eslint": "8.17.0",
     "markdown-it-attrs": "^4.1.4",
@@ -12,10 +11,8 @@
     "sass": "1.53.0"
   },
   "scripts": {
-    "sass": "npx sass src/scss/style.scss:_site/css/style.css",
-    "postcss": "npx postcss _site/css/*.css --use autoprefixer -d _site/css",
-    "prebuild": "npm run sass && npm run postcss",
-    "start": "NODE_ENV=development BASE_URL=http://localhost:8080 concurrently 'eleventy --serve --quiet' 'yarn run sass --watch'",
+    "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
+    "start-ios": "eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy"
   }
 }
