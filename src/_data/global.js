@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-  baseUrl: process.env.BASE_URL || 'https://localghost.dev',
+  baseUrl: 'http://localhost:8000',
   currentYear() {
     return new Date().getFullYear();
   },
@@ -14,7 +14,7 @@ module.exports = {
     return `${segment()}-${segment()}-${segment()}`;
   },
   isDev() {
-    return process.env.NODE_ENV !== 'production';
+    return true;
   },
   cssFile() {
     const scssDir = path.join(__dirname, '..', 'scss');
