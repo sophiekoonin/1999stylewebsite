@@ -2,6 +2,7 @@
 const debugFilter = require('./src/filters/debug');
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const gif = require('./src/shortcodes/gif');
 
 const markdownItOptions = {
   html: true,
@@ -17,6 +18,7 @@ module.exports = (config) => {
   config.setLibrary('md', markdownLib);
 
   config.addFilter('debug', debugFilter);
+  config.addShortcode('gif', gif);
 
   return {
     dir: {

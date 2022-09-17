@@ -45,6 +45,11 @@ main {
   max-width: 80ch;
   padding: var(--space-s);
   background: beige;
+  text-align: center;
+
+  img {
+    margin: var(--space-xs-s) auto;
+  }
 }
 
 .flow > * + * {
