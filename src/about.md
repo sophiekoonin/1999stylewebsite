@@ -1,6 +1,6 @@
 ---
 title: "About"
-layout: base.njk
+layout: layout.njk
 ---
 
 Have some conference blurb: 

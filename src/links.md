@@ -1,6 +1,6 @@
 ---
 title: "Links"
-layout: base.njk
+layout: layout.njk
 ---
 
 I couldn't have done this demo without these brilliant websites:
