@@ -27,9 +27,12 @@
   </head>
   <body>
     <div class="page-wrapper">
+      <header>
+        <h1>{{ title }}</h1>
+      </header>
       <aside class="sidebar">
         <nav class="main-nav">
-          <ul role="list">
+          <ul role="list" class="nav-list">
             <li>
               <a href="/">Home</a>
             </li>
@@ -42,16 +45,11 @@
           </ul>
         </nav>
       </aside>
-      <div class="content">
-        <header>
-          <h1>{{ title }}</h1>
-        </header>
-        <main>
-          {% block content %}
-            {{ content | safe }}
-          {% endblock %}
-        </main>
-      </div>
+      <main>
+        {% block content %}
+          {{ content | safe }}
+        {% endblock %}
+      </main>
     </div>
   </body>
 </html>

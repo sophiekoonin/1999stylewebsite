@@ -1,88 +1,52 @@
-@forward '_reset';
+@forward 'reset';
+@forward 'variables';
 
 .page-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   min-height: 100vh;
+
+  & > * + * {
+    margin-top: var(--space-s-m);
+  }
 }
 
 body {
+  font-size: var(--step--1);
   background: url('/tile-bg.jpg');
+  padding: var(--space-s-m);
+}
+
+header {
+  text-align: center;
+  h1 {
+    font-size: var(--step-5);
+    font-family: Comic Sans MS, sans-serif;
+    color: navy;
+  }
 }
 
 aside {
-  flex-grow: 1;
-  flex-basis: 15rem;
-  text-align: center;
-  padding-block-start: 5rem;
-  font-size: 1.5rem;
-  li + li {
-    margin-block-start: 1rem;
+  font-size: var(--step-0);
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
   }
-
   a {
     font-weight: bold;
     background: blue;
-    padding: 0.5rem;
+    padding: var(--space-2xs);
     color: white;
   }
 }
 
-.content {
-  flex-grow: 999;
-  flex-basis: 0;
-  min-inline-size: 50%;
-}
-
 main {
+  margin-inline: auto;
   overflow: hidden;
   max-width: 80ch;
-  padding: 1.5rem;
+  padding: var(--space-s);
   background: beige;
-}
-
-header {
-  h1 {
-    font-size: 5rem;
-    font-family: Comic Sans MS, sans-serif;
-    color: navy;
-  }
-  margin-block-end: 2rem;
 }
 
 .flow > * + * {
   margin-top: var(--space-xs-s);
-}
-
-.marquee {
-  @media (prefers-reduced-motion: no-preference) {
-    overflow: hidden;
-    animation: marquee linear 18s infinite;
-    position: relative;
-    @keyframes marquee {
-      0% {
-        right: -100%;
-      }
-      100% {
-        right: 100%;
-      }
-    }
-  }
-}
-
-.blink {
-  @media (prefers-reduced-motion: no-preference) {
-    animation: blink linear 1.5s infinite;
-  }
-  @keyframes blink {
-    0% {
-      visibility: hidden;
-    }
-    50% {
-      visibility: hidden;
-    }
-    100% {
-      visibility: visible;
-    }
-  }
 }
