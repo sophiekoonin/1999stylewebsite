@@ -26,9 +26,6 @@
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
   </head>
   <body>
-    <header>
-      <h1>{{ title }}</h1>
-    </header>
     <div class="page-wrapper">
       <aside class="sidebar">
         <nav class="main-nav">
@@ -45,13 +42,16 @@
           </ul>
         </nav>
       </aside>
-      <main>
-        <div class="content">
+      <div class="content">
+        <header>
+          <h1>{{ title }}</h1>
+        </header>
+        <main>
           {% block content %}
             {{ content | safe }}
           {% endblock %}
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </body>
 </html>
