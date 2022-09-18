@@ -1,5 +1,6 @@
 @forward 'reset';
 @forward 'variables';
+@forward 'text-effects';
 
 .page-wrapper {
   min-height: 100vh;
@@ -44,7 +45,7 @@ main {
   overflow: hidden;
   max-width: 80ch;
   padding: var(--space-s);
-  background: beige;
+  background: white;
 }
 
 .flow > * + * {

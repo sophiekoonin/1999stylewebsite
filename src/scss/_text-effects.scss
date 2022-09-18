@@ -1,0 +1,40 @@
+.marquee {
+  @media (prefers-reduced-motion: no-preference) {
+    overflow: hidden;
+    animation: marquee linear 18s infinite;
+    position: relative;
+    @keyframes marquee {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 100%;
+      }
+    }
+  }
+}
+
+.blink {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: blink linear 1.5s infinite;
+  }
+  @keyframes blink {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+}
+
+.rainbow {
+  display: inline;
+  background: linear-gradient(90deg, #ff0000, #ff8800, #cdcd14, #02be02, #0000ff, #4f00ff, #9c00ff);
+  background-clip: text;
+  color: transparent;
+  
+}
