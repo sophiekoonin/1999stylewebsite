@@ -35,8 +35,8 @@ It's not quite finished yet... in fact, you might say it's...
       Webring</a>
   </p>
   <p>
-    <a href="https://webring.sophiekoonin.workers.dev/prev" target="_blank" rel="noopener noreferrer">Previous</a>
-    <a href="https://webring.sophiekoonin.workers.dev/next" target="_blank" rel="noopener noreferrer">Next</a>
+    <a href="https://webring.sophiekoonin.workers.dev/prev">Previous</a>
+    <a href="https://webring.sophiekoonin.workers.dev/next">Next</a>
     <a href="https://webring.sophiekoonin.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
     <a href="https://sotb22-webring.neocities.org" target="_blank" rel="noopener noreferrer">Members</a>
   </p>
