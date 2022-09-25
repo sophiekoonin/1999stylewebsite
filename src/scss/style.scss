@@ -59,7 +59,7 @@ main {
   overflow: hidden;
   max-width: 80ch;
   padding: var(--space-s);
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .flow > * + * {
@@ -72,4 +72,17 @@ main {
   margin-inline: auto;
   background-color: aliceblue;
   padding: 1rem;
+}
+
+picture {
+  display: block;
+  img {
+    margin-inline: auto;
+  }
+}
+
+audio {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
