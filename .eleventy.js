@@ -14,6 +14,7 @@ module.exports = (config) => {
   config.addWatchTarget('./src');
 
   config.addPassthroughCopy({ './src/static': '/' });
+  config.addPassthroughCopy({ './src/js': '/' });
   config.setLibrary('md', markdownLib);
 
   config.addFilter('debug', debugFilter);

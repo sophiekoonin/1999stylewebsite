@@ -14,5 +14,8 @@
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "start-ios": "eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy"
+  },
+  "prettier": {
+    "semi": true
   }
 }

@@ -1,6 +1,6 @@
-@forward 'reset';
-@forward 'variables';
-@forward 'text-effects';
+@forward "reset";
+@forward "variables";
+@forward "text-effects";
 
 .page-wrapper {
   min-height: 100vh;
@@ -12,11 +12,13 @@
 
 body {
   font-size: var(--step--1);
-  background: url('/tile-bg.jpg');
-  padding: var(--space-s-m);
+  background: url("/tile-bg.jpg");
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 header {
+  padding-block-start: var(--space-s-m);
   text-align: center;
   h1 {
     font-size: 5rem;
@@ -26,6 +28,14 @@ header {
     filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa,Strength=1);
     text-shadow: 0.13em -0.13em 0px #0000aa;
     letter-spacing: -0.05em;
+  }
+}
+
+a {
+  font-weight: bold;
+  color: navy;
+  &:hover {
+    color: magenta;
   }
 }
 
@@ -54,4 +64,11 @@ main {
 
 .flow > * + * {
   margin-top: var(--space-xs-s);
+}
+
+.webring-container {
+  text-align: center;
+  display: inline-block;
+  background-color: aliceblue;
+  padding: 1rem;
 }
