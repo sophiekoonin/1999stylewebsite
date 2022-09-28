@@ -4,8 +4,10 @@
     "autoprefixer": "^10.4.2",
     "cssnano": "5.1.12",
     "eslint": "8.17.0",
+    "lodash": "^4.17.21",
     "markdown-it-attrs": "^4.1.4",
     "md5": "2.3.0",
+    "node-fetch": "^2",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",
     "sass": "1.53.0"
