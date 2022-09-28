@@ -1,4 +1,4 @@
-{% extends layout.njk %}
+{% extends "layout.njk" %}
 {% block content %}
   {{ content | safe }}
   {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
