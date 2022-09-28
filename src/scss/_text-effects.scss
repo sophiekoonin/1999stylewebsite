@@ -32,18 +32,20 @@
 }
 
 .rainbow {
-  display: inline;
-  font-weight: bold;
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff8800,
-    #cdcd14,
-    #02be02,
-    #0000ff,
-    #4f00ff,
-    #9c00ff
-  );
-  background-clip: text;
-  color: transparent;
+  @supports (background-clip: text) {
+    display: inline;
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      #ff0000,
+      #ff8800,
+      #cdcd14,
+      #02be02,
+      #0000ff,
+      #4f00ff,
+      #9c00ff
+    );
+    background-clip: text;
+    color: transparent;
+  }
 }
