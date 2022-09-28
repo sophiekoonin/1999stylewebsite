@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 {% block content %}
   {{ content | safe }}
-  {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
+  {%- set absoluteUrl -%}{{ page.url | url }}{%- endset -%}
   {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) -%}
   <div class="webmentions flow" id="webmentions">
     <h2>Signatures</h2>
@@ -38,7 +38,7 @@
               {% endfor %}
               {%- if mentions.length > 10 -%}
                 <div class="webmentions-more">
-                  <a href="{{ page.url | url | absoluteUrl(metadata.url) }}#webmentions">Show all {{ mentions.length }}</a>
+                  <a href="{{ page.url | url | metadata.url }}#webmentions">Show all {{ mentions.length }}</a>
                 </div>
               {%- endif -%}
             </ol>
