@@ -6,7 +6,7 @@ const metadata = require("./metadata.json");
 // Configuration Parameters
 const CACHE_DIR = "_cache";
 const API_ORIGIN = "https://webmention.io/api/mentions.jf2";
-const TOKEN = process.env.WEBMENTION_IO_TOKEN;
+const TOKEN = process.env.WEBMENTIONS_TOKEN;
 
 async function fetchWebmentions(since) {
   const domain = "sophie-sotb22.neocities.org";
