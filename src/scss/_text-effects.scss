@@ -49,3 +49,17 @@
     color: transparent;
   }
 }
+
+.wordart {
+  display: inline-block;
+  background: linear-gradient(#6726bf, #a62cc0 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: skewY(-8deg);
+  font-family: "Impact";
+
+  &-wrap {
+    filter: drop-shadow(5px 5px 0px rgba(#828cfb, 0.8));
+  }
+}

@@ -1,6 +1,5 @@
 // Filters
 const debugFilter = require("./src/filters/debug");
-const webmentionsFilter = require("./src/filters/webmentions");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 
@@ -17,14 +16,7 @@ module.exports = (config) => {
   config.addPassthroughCopy({ "./src/static": "/" });
   config.addPassthroughCopy({ "./src/js": "/" });
   config.setLibrary("md", markdownLib);
-  config.addFilter("head", (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
 
-    return array.slice(0, n);
-  });
-  config.addFilter("webmentionsForUrl", webmentionsFilter);
   config.addFilter("debug", debugFilter);
 
   return {

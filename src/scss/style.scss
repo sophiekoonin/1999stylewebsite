@@ -20,15 +20,7 @@ body {
 header {
   padding-block-start: var(--space-s-m);
   text-align: center;
-  h1 {
-    font-size: 5rem;
-    font-family: Impact, sans-serif;
-    color: #24c0fd;
-    -webkit-text-stroke: 0.01em #0000aa;
-    filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa,Strength=1);
-    text-shadow: 0.13em -0.13em 0px #0000aa;
-    letter-spacing: -0.05em;
-  }
+  font-size: var(--step-2);
 }
 
 a {
@@ -85,4 +77,36 @@ audio {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.webmentions {
+  list-style-type: none;
+  margin-inline: 0;
+
+  .webmention {
+    &-meta {
+      display: flex;
+      align-items: center;
+      * + * {
+        margin-inline-start: var(--space-xs);
+      }
+    }
+    &-author {
+      display: flex;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        height: var(--space-m);
+        width: var(--space-m);
+        min-width: var(--space-m);
+      }
+    }
+
+    &-pubdate {
+      font-style: italic;
+    }
+    .p-name {
+      font-weight: bold;
+    }
+  }
 }

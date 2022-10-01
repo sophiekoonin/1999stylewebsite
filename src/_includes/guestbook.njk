@@ -1,49 +1,8 @@
 {% extends "layout.njk" %}
 {% block content %}
   {{ content | safe }}
-  {%- set absoluteUrl -%}{{ page.url | url }}{%- endset -%}
-  {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) -%}
-  <div class="webmentions flow" id="webmentions">
-    <h2>Signatures</h2>
-    {%- if mentions.length > 0 -%}
-      <ol class="webmentions-list flow">
-        {% for webmention in mentions | head(10) | reverse %}
-          <li>
-            <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
-              <div class="webmention-meta">
-                {% if webmention.author %}
-                  <a class="webmention-author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
-                    {% if webmention.author.photo %}
-                      <img class="u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
-                      {% else %}
-                        <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
-                        {% endif %}
-                        <span class="p-name">{{ webmention.author.name }}</span>
-                      </a>
-                    {% else %}
-                      <span class="webmention__author">
-                        <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
-                          <span>Anonymous</span>
-                        </span>
-                      {% endif %}
-                      {% if webmention.published %}
-                        <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
-                      {% endif %}
-                    </div>
-                    <div class="webmention__content p-content">
-                      {{ webmention.content.value | safe }}
-                    </div>
-                  </article>
-                </li>
-              {% endfor %}
-              {%- if mentions.length > 10 -%}
-                <div class="webmentions-more">
-                  <a href="{{ page.url | url | metadata.url }}#webmentions">Show all {{ mentions.length }}</a>
-                </div>
-              {%- endif -%}
-            </ol>
-          {% else %}
-            <p>No mentions yet.</p>
-          {% endif %}
-        </div>
-      {% endblock %}
+  <ol id="mentions-list" class="webmentions">
+    No signatures yet!
+  </ol>
+  <script type="text/javascript" src="/mentions.js"></script>
+{% endblock %}
