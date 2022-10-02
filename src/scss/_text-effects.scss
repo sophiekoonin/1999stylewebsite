@@ -1,52 +1,36 @@
-.marquee {
-  @media (prefers-reduced-motion: no-preference) {
-    overflow: hidden;
-    animation: marquee linear 18s infinite;
-    position: relative;
-    @keyframes marquee {
-      0% {
-        right: -100%;
-      }
-      100% {
-        right: 100%;
-      }
-    }
-  }
-}
-
-.blink {
-  @media (prefers-reduced-motion: no-preference) {
-    animation: blink linear 1.5s infinite;
-  }
-  @keyframes blink {
-    0% {
-      visibility: hidden;
-    }
-    50% {
-      visibility: hidden;
-    }
-    100% {
-      visibility: visible;
-    }
-  }
-}
-
 .rainbow {
-  @supports (background-clip: text) {
-    display: inline;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #9c00ff,
+    #ff0000,
+    #ff8800,
+    #ffff00,
+    #02be02,
+    #0000ff,
+    #4f00ff,
+    #9c00ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  transform: scaleY(1.25);
+
+  &-wrapper {
+    font-family: "Arial", sans-serif;
     font-weight: bold;
-    background: linear-gradient(
-      90deg,
-      #ff0000,
-      #ff8800,
-      #cdcd14,
-      #02be02,
-      #0000ff,
-      #4f00ff,
-      #9c00ff
-    );
-    background-clip: text;
-    color: transparent;
+    position: relative;
+    display: inline-block;
+    line-height: 1.25;
+    &:before {
+      position: absolute;
+      content: attr(data-content);
+      transform: skew(60deg) scaleY(0.5);
+      transform-origin: bottom left;
+      color: black;
+      opacity: 0.2;
+    }
   }
 }
 

@@ -3,9 +3,9 @@ title: Sophie's Homepage
 layout: layout.njk
 ---
 
-<span class="marquee rainbow">Hi State of the Browser 2022!</span>
+Hi State of the Browser 2022!
 
-My name is Sophie and this is my 90s-style homepage!
+My name is Sophie and this is my Web 1.0-style homepage!
 
 <picture>
   <source srcset="/img/welcome.gif" media="(prefers-reduced-motion: no-preference)">
@@ -21,7 +21,7 @@ It's not quite finished yet... in fact, you might say it's...
   <img src="/img/consbar.png" alt="Under construction"/>
 </picture>
 
-<span class="rainbow">Thanks for visiting!</span>
+<span class="rainbow-wrapper" data-content="Thanks for visiting!"><span class="rainbow">Thanks for visiting!</span></span> {.thanksText}
 
 <picture>
   <source srcset="/img/colorbar.gif" media="(prefers-reduced-motion: no-preference)">
