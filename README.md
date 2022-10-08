@@ -1,14 +1,5 @@
-# eleventy-base
-A basic Eleventy site.
+# Sophie's State of the Browser 2022 Demo site
 
-Local dev with hot reloading: `yarn start`
-Build for production: `yarn build`
+Absolute chaos in the form of an [Eleventy](https://11ty.dev) site.
 
-What to include:
-- semantic tags
-- wordart style header
-- gifs + reduced motion 
-- marquee
-- blink
-- webring 
-- guestbook
+Created for a talk at State of the Browser 2022.

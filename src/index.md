@@ -3,16 +3,15 @@ title: Sophie's Homepage
 layout: layout.njk
 ---
 
+<source srcset="/img/welcome.gif" media="(prefers-reduced-motion: no-preference)">
+  <img src="/img/welcome.png" alt="Welcome to my homepage"/>
+</picture>
+
 Hi State of the Browser 2022!
 
 My name is Sophie and this is my Web 1.0-style homepage!
 
-<picture>
-  <source srcset="/img/welcome.gif" media="(prefers-reduced-motion: no-preference)">
-  <img src="/img/welcome.png" alt="Welcome to my homepage"/>
-</picture>
-
-I made this site to demonstrate how we might build silly and creative homepages just like we did in the 90s/00s, but with <span class="">modern CSS, HTML and JS.</span>
+I made this site to demonstrate how we might build silly and creative homepages just like we did in the 90s/00s, but with <strong>modern CSS, HTML and JS.</strong>
 
 It's not quite finished yet... in fact, you might say it's...
 
@@ -27,6 +26,8 @@ It's not quite finished yet... in fact, you might say it's...
   <source srcset="/img/colorbar.gif" media="(prefers-reduced-motion: no-preference)">
   <img src="/img/colorbar.png" alt=""/>
 </picture>
+
+See the source code on <a href="https://github.com/sophiekoonin/stateofthebrowser22">GitHub</a>. 
 
 <div class="webring-container">
 <span aria-hidden>🪐</span>
