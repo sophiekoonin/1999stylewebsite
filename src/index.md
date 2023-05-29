@@ -7,7 +7,7 @@ layout: layout.njk
   <img src="/img/welcome.png" alt="Welcome to my homepage"/>
 </picture>
 
-Hi State of the Browser 2022!
+Hi modern web folks!
 
 My name is Sophie and this is my Web 1.0-style homepage!
 

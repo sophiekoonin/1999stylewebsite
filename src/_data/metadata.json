@@ -1,8 +1,8 @@
 {
-  "title": "State of the Browser 2022 - Sophie's Demo",
-  "url": "https://sophie-sotb22.neocities.org",
-  "domain": "sophie-sotb22.neocities.org",
-  "description": "Sophie's noodlings for State of the Browser",
+  "title": "Sophie's 1999-style homepage",
+  "url": "https://sophieswebsite1999.neocities.org",
+  "domain": "sophieswebsite1999.neocities.org",
+  "description": "A demo of how we might build old-school websites in a modern way",
   "author": {
     "name": "Sophie Koonin",
     "email": "sophie@localghost.dev",
