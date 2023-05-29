@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 module.exports = {
-  baseUrl: "https://sophie-sotb22.neocities.org",
+  baseUrl: "https://sophieswebsite1999.neocities.org",
   currentYear() {
     return new Date().getFullYear();
   },
