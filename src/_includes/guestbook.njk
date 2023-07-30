@@ -1,8 +1,20 @@
-{% extends "layout.njk" %}
+{% extends "layout-shell.njk" %}
 {% block content %}
-  {{ content | safe }}
+      <main class="flow guestbook">
+  <div>{{ content | safe }}</div>
+<div>
+  <div class="likes">
+  <picture>
+    <source srcset="{{ global.baseUrl }}/img/likes-anim.webp" type="image/webp" media="(prefers-reduced-motion: no-preference)">
+    <img src="{{ global.baseUrl }}/img/likes-static.png" alt="Likes"/> 
+    </picture>
+    <p id="mentions-likes"></p>
+    <div id="mentions-likes-avatars"></div>
+    </div>
+</div>
   <ol id="mentions-list" class="webmentions">
-    No signatures yet!
+      Loading signatures...
   </ol>
   <script type="text/javascript" src="{{ global.baseUrl }}/mentions.js"></script>
+  </main>
 {% endblock %}

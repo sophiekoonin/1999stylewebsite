@@ -1,65 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% set cssFilename = global.cssFile() %}
-  <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
-    <meta property="og:title" content="{{ metadata.title }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="{{ metadata.description }}"/>
-    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}"/>
-    <meta property="og:site_name" content="{{ metadata.title }}"/>
-    <meta property="og:locale" content="en_GB"/>
-    <meta name="generator" content="Eleventy"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="{{ metadata.title }}"/>
-    <meta name="twitter:site" content="{{ metadata.author.twitter_handle }}"/>
-    <meta name="twitter:description" content="{{ metadata.description }}"/>
-    <link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention"/>
-    <link href="mailto:sophies1999websitedemo@localghost.dev" rel="me"/>
-    <link rel="pingback" href="https://webmention.io/{{ metadata.domain }}/xmlrpc"/>
-    <link rel="me" href="https://mastodon.social/@sophieswebmentiondemo" />
-    <meta property="og:image" content="{{ global.baseUrl }}/og-image.png"/>
-    <meta property="twitter:image" content="{{ global.baseUrl }}/og-image.png"/>
-    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-    <script src="/main.js"></script>
-    <title>
-      {{ metadata.title }}
-    </title>
-    <link rel="preload" as="style" href={{ cssFilename }}>
-    <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
-  </head>
-  <body>
-    <div class="page-wrapper">
-      <header class="wordart-wrap">
-        <h1 class="wordart">{{ title }}</h1>
-      </header>
-      <aside class="sidebar">
-        <nav class="main-nav">
-          <ul role="list" class="nav-list">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/links">Links</a>
-            </li>
-            <li>
-              <a href="/guestbook">Guestbook</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+{% extends "layout-shell.njk" %}
+{% block content %}
       <main class="flow">
-        {% block content %}
-          {{ content | safe }}
-        {% endblock %}
+{{content | safe }}
       </main>
-    </div>
-    <audio aria-label="Play music while you browse" controls src="/soundtrack.webm"></audio>
-  </body>
-</html></body></html></body></html>
+{% endblock %}

@@ -50,7 +50,10 @@ main {
   overflow: hidden;
   max-width: 80ch;
   padding: var(--space-s) var(--space-m);
-  background: white;
+
+  &:not(.guestbook) {
+    background: white;
+  }
 
   img {
     margin-inline: auto;
@@ -85,8 +88,15 @@ audio {
 .webmentions {
   list-style-type: none;
   margin-inline: 0;
+  padding: 0;
+  & > * + * {
+    margin-block-start: var(--space-s);
+  }
 
   .webmention {
+    background: white;
+    padding: var(--space-xs);
+
     &-meta {
       display: flex;
       align-items: center;
@@ -97,12 +107,6 @@ audio {
     &-author {
       display: flex;
       align-items: center;
-      img {
-        border-radius: 50%;
-        height: var(--space-m);
-        width: var(--space-m);
-        min-width: var(--space-m);
-      }
     }
 
     &-pubdate {
@@ -129,4 +133,27 @@ audio {
   border-left: 8px solid hsl(0, 0%, 70%);
   border-right: 8px solid hsl(0, 0%, 42%);
   border-bottom: 8px solid hsl(0, 0%, 42%);
+}
+
+.guestbook {
+  div {
+    background: white;
+    padding: var(--space-xs);
+  }
+  .likes {
+    display: flex;
+    align-items: center;
+  }
+  #mentions-likes-avatars {
+    display: flex;
+    & > * + * {
+      margin-inline-start: -1rem;
+    }
+  }
+  .u-photo {
+    border-radius: 50%;
+    height: var(--space-m);
+    width: var(--space-m);
+    min-width: var(--space-m);
+  }
 }

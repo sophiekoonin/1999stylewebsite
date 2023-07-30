@@ -4,20 +4,22 @@ const mentionsUrl =
 async function fetchWebmentions() {
   const rsp = await fetch(mentionsUrl);
   const mentions = await rsp.json();
-  const links = mentions.links;
-  const listItems = links.map(
-    (webmention) =>
-      `<li>
-        <article class="webmention flow h-cite" id="webmention-${
-          webmention.id
-        }">
+  const replies = mentions.links.filter(
+    (mention) => mention.activity.type === "reply"
+  );
+  const likes = mentions.links.filter(
+    (mention) => mention.activity.type === "like"
+  );
+  const listItems = replies.map((webmention) => {
+    return `<li>
+        <article class="webmention h-cite" id="webmention-${webmention.id}">
           <div class="webmention-meta">
             <a class="webmention-author p-author h-card u-url" href="${
               webmention.data.url
             }" target="_blank" rel="noopener noreferrer">
               <img class="u-photo" src="${webmention.data.author.photo}" alt="${
-        webmention.data.author.name
-      }">
+      webmention.data.author.name
+    }">
               <span class="p-name">${webmention.data.author.name}</span>
             </a>
             <time class="webmention-pubdate dt-published" datetime="${
@@ -28,9 +30,16 @@ async function fetchWebmentions() {
             ${webmention.data.content}
           </div>
       </article>
-  </li>`
-  );
-  document.getElementById("mentions-list").innerHTML = listItems.join("");
+  </li>`;
+  });
+  document.getElementById("mentions-likes").innerHTML = `${likes.length} likes`;
+  document.getElementById("mentions-list").innerHTML =
+    listItems.length > 0 ? listItems.join("") : "No signatures yet!";
+  document.getElementById("mentions-likes-avatars").innerHTML = likes
+    .map((like) => {
+      return `<img class="u-photo" src="${like.data.author.photo}" alt="${like.data.author.name}" />`;
+    })
+    .join("");
 }
 
 fetchWebmentions();
