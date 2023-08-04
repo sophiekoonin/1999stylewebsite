@@ -87,7 +87,7 @@ audio {
 
 .webmentions {
   list-style-type: none;
-  margin-inline: 0;
+  margin: 0;
   padding: 0;
   & > * + * {
     margin-block-start: var(--space-s);
@@ -95,7 +95,7 @@ audio {
 
   .webmention {
     background: white;
-    padding: var(--space-xs);
+    padding: var(--space-s);
 
     &-meta {
       display: flex;
@@ -136,13 +136,17 @@ audio {
 }
 
 .guestbook {
-  div {
+  .hidden {
+    display: none;
+  }
+  > div:not(.mentions-list-wrapper) {
     background: white;
     padding: var(--space-xs);
   }
   .likes {
     display: flex;
     align-items: center;
+    gap: var(--space-xs);
   }
   #mentions-likes-avatars {
     display: flex;

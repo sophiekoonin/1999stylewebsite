@@ -32,9 +32,17 @@ async function fetchWebmentions() {
       </article>
   </li>`;
   });
-  document.getElementById("mentions-likes").innerHTML = `${likes.length} likes`;
-  document.getElementById("mentions-list").innerHTML =
-    listItems.length > 0 ? listItems.join("") : "No signatures yet!";
+  if (listItems.length === 0) {
+    document.getElementById("mentions-placeholder").innerHTML =
+      "No mentions yet!";
+  } else {
+    document.getElementById("mentions-placeholder").classList.add("hidden");
+    document.getElementById("mentions-list").classList.remove("hidden");
+  }
+  document.getElementById("mentions-likes").innerHTML = `${likes.length} like${
+    likes.length === 1 ? "" : `s`
+  }`;
+  document.getElementById("mentions-list").innerHTML = listItems.join("");
   document.getElementById("mentions-likes-avatars").innerHTML = likes
     .map((like) => {
       return `<img class="u-photo" src="${like.data.author.photo}" alt="${like.data.author.name}" />`;

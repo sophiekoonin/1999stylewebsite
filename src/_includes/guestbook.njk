@@ -12,9 +12,10 @@
     <div id="mentions-likes-avatars"></div>
     </div>
 </div>
-  <ol id="mentions-list" class="webmentions">
-      Loading signatures...
-  </ol>
+<div class="mentions-list-wrapper">
+  <p id="mentions-placeholder">Loading...</p>
+  <ol id="mentions-list" class="webmentions hidden"></ol>
+  </div>
   <script type="text/javascript" src="{{ global.baseUrl }}/mentions.js"></script>
   </main>
 {% endblock %}
