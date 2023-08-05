@@ -161,3 +161,24 @@ audio {
     min-width: var(--space-m);
   }
 }
+
+.counter {
+  margin-inline: auto;
+  display: inline-flex;
+  font-family: monospace;
+  border: 1px solid #ddd;
+  color: #fff;
+  & > * + * {
+    border-inline-start: 1px solid #ddd;
+  }
+
+  .digit {
+    display: inline-block;
+    padding-inline: 2px;
+    background: linear-gradient(180deg, #000, #aaa, #000);
+  }
+
+  &-container {
+    text-align: center;
+  }
+}

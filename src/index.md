@@ -23,9 +23,6 @@ It's not quite finished yet... in fact, you might say it's...
 
 <span class="rainbow-wrapper" data-content="Thanks for visiting!"><span class="rainbow">Thanks for visiting!</span></span> {.thanksText}
 
-<div id="counter"></div>
-
-
 <picture>
   <source srcset="/img/colorbar.gif" media="(prefers-reduced-motion: no-preference)">
   <img src="/img/colorbar.png" alt=""/>
