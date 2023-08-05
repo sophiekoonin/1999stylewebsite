@@ -30,8 +30,7 @@
     </title>
     <link rel="preload" as="style" href="{{ cssFilename }}">
     <link rel="stylesheet" type="text/css" href="{{ cssFilename }}">
-  <script data-goatcounter="https://sophies1999webpage.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  
   </head>
   <body>
     <div class="page-wrapper">
@@ -59,8 +58,12 @@
         {% block content %}
           {{ content | safe }}
         {% endblock %}
+        {% if isHome %}
         {% include "counter.njk" %}
+        {% endif %}
     </div>
+    <script data-goatcounter="https://sophies1999webpage.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
     <audio aria-label="Play music while you browse" controls src="/soundtrack.webm"></audio>
   </body>
 </html>
