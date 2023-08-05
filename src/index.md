@@ -1,6 +1,7 @@
 ---
 title: Sophie's Homepage
 layout: layout.njk
+isHome: true
 ---
 
 <source srcset="/img/welcome.gif" media="(prefers-reduced-motion: no-preference)">
@@ -21,6 +22,9 @@ It's not quite finished yet... in fact, you might say it's...
 </picture>
 
 <span class="rainbow-wrapper" data-content="Thanks for visiting!"><span class="rainbow">Thanks for visiting!</span></span> {.thanksText}
+
+<div id="counter"></div>
+
 
 <picture>
   <source srcset="/img/colorbar.gif" media="(prefers-reduced-motion: no-preference)">

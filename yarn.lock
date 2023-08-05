@@ -7,6 +7,16 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-2.0.1.tgz#b3c8fa6c91c4a29257e70dd19d26cca75cde89d2"
   integrity sha512-5R+DsT9LJ9tXiSQ4y+KLFppCkQyXhzAm1AIuBWE/sbU0hSXY5pkhoqQYEcPJQFg/nglL+wD55iv2j+7O96UAvg==
 
+"@11ty/eleventy-fetch@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-fetch/-/eleventy-fetch-4.0.0.tgz#500d69b9ec336d8e4fd1e618cabb9a262c7a333f"
+  integrity sha512-wGAd0r+8DUWr22fK5r07dOKuNY6ltA7hX+sJzngGZL1yJmuUVdM/xPQZ+iq0BFgf/ZeRdpVEzf2D0cpVZUuiTg==
+  dependencies:
+    debug "^4.3.4"
+    flat-cache "^3.0.4"
+    node-fetch "^2.6.7"
+    p-queue "^6.6.2"
+
 "@11ty/eleventy-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-utils/-/eleventy-utils-1.0.1.tgz#e89dc94b475284e5003525db5078663c5087db82"
@@ -1157,7 +1167,7 @@ etag@1.8.1, etag@^1.8.1, etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^4.0.0:
+eventemitter3@^4.0.0, eventemitter3@^4.0.4:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
@@ -1989,6 +1999,13 @@ node-fetch@^2:
   dependencies:
     whatwg-url "^5.0.0"
 
+node-fetch@^2.6.7:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.12.tgz#02eb8e22074018e3d5a83016649d04df0e348fba"
+  integrity sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==
+  dependencies:
+    whatwg-url "^5.0.0"
+
 node-releases@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.2.tgz#7139fe71e2f4f11b47d4d2986aaf8c48699e0c01"
@@ -2079,6 +2096,26 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
+
+p-finally@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
+  integrity sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==
+
+p-queue@^6.6.2:
+  version "6.6.2"
+  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.6.2.tgz#2068a9dcf8e67dd0ec3e7a2bcb76810faa85e426"
+  integrity sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==
+  dependencies:
+    eventemitter3 "^4.0.4"
+    p-timeout "^3.2.0"
+
+p-timeout@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
+  integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
+  dependencies:
+    p-finally "^1.0.0"
 
 parent-module@^1.0.0:
   version "1.0.1"
