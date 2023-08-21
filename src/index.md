@@ -14,6 +14,9 @@ My name is Sophie and this is my Web 1.0-style homepage!
 
 I made this site to demonstrate how we might build silly and creative homepages just like we did in the 90s/00s, but with <strong>modern CSS, HTML and JS.</strong>
 
+
+See the source code on <a href="https://github.com/sophiekoonin/stateofthebrowser22">GitHub</a>. 
+
 It's not quite finished yet... in fact, you might say it's...
 
 <picture>
@@ -28,18 +31,14 @@ It's not quite finished yet... in fact, you might say it's...
   <img src="/img/colorbar.png" alt=""/>
 </picture>
 
-See the source code on <a href="https://github.com/sophiekoonin/stateofthebrowser22">GitHub</a>. 
 
 <div class="webring-container">
-  <span aria-hidden>🪐</span>
-  <p>Part of the
-    <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
-      Webring</a>
-  </p>
-  <p>
-    <a href="https://webring.sophiekoonin.workers.dev/prev">Previous</a>
-    <a href="https://webring.sophiekoonin.workers.dev/next">Next</a>
-    <a href="https://webring.sophiekoonin.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
-    <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Members</a>
-  </p>
+          <span aria-hidden="true">🪐</span>
+            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
+              Webring</a> <span aria-hidden="true">//</span>
+            <a href="https://weird-website-lovers-webring.cloudflare-aa8.workers.dev/prev">Prev</a>
+            <a href="https://weird-website-lovers-webring.cloudflare-aa8.workers.dev/next">Next</a>
+            <a href="https://weird-website-lovers-webring.cloudflare-aa8.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
+            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">List</a>
+          </p>
 </div>

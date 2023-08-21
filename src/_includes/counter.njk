@@ -1,7 +1,9 @@
 <div class="counter-container">
-<div class="counter" aria-label="Hit counter">
+<span>You are visitor number:</span>
+<div class="counter">
 {% for digit in counter %}
     <span class="digit">{{ digit }}</span>
 {% endfor %}
 </div>
+<span class="attribution"><a href="https://goatcounter.com">goatcounter</a></span>
 </div>

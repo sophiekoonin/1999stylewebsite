@@ -66,8 +66,8 @@ main {
 
 .webring-container {
   text-align: center;
-  max-width: min(40ch, 100%);
   margin-inline: auto;
+  max-width: fit-content;
   background-color: aliceblue;
   padding: 1rem;
 }
@@ -180,5 +180,13 @@ audio {
 
   &-container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    & > * + * {
+      margin-block-start: var(--space-xs);
+    }
+    .attribution {
+      font-size: var(--step--2);
+    }
   }
 }

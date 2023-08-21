@@ -2,5 +2,8 @@
 {% block content %}
       <main class="flow">
 {{content | safe }}
+{% if isHome %}
+        {% include "counter.njk" %}
+        {% endif %}
       </main>
 {% endblock %}
