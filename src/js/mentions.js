@@ -71,7 +71,7 @@ async function fetchWebmentions() {
   document.getElementById("mentions-list").innerHTML = listItems.join("");
   document.getElementById("mentions-likes-avatars").innerHTML = likes
     .map((like) => {
-      return `<img class="u-photo" src="${like.data.author.photo}" alt="${like.data.author.name}" />`;
+      return `<img class="u-photo" src="${like.author.photo}" alt="${like.author.name}" />`;
     })
     .join("");
 }
