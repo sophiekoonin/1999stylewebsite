@@ -9,6 +9,8 @@ async function fetchCounter() {
   });
 }
 module.exports = async function () {
-  const { count_unique: count } = await fetchCounter();
-  return count.toString().padStart(MAX_COUNTER_LENGTH, "0");
+  // const { count_unique: count } = await fetchCounter();
+  const count = 3488;
+  const countStr = count.toString();
+  return countStr.padStart(MAX_COUNTER_LENGTH, "0");
 };

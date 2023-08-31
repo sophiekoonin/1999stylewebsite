@@ -1,33 +1,59 @@
 const mentionsUrl =
-  "https://webmention.io/api/mentions?page=0&per-page=20&sort-by=published&target=https://sophieswebsite1999.neocities.org/guestbook/";
+  "https://webmention.io/api/mentions.jf2?target=https://sophieswebsite1999.neocities.org/guestbook/";
 
+/*
+       "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sophie",
+        "photo": "https://webmention.io/avatar/files.mastodon.social/bc9982878ca1c39bd4b7bcf9f5cccae37a2235005dc7b11bcadf7b45bca05064.jpg",
+        "url": "https://social.lol/@sophie"
+      },
+      "url": "https://social.lol/@sophie/110984085004344231",
+      "published": "2023-08-31T11:52:22",
+      "wm-received": "2023-08-31T11:52:31Z",
+      "wm-id": 1711150,
+      "wm-source": "https://brid.gy/comment/mastodon/@sophieswebmentiondemo@mastodon.social/110803776985994470/110984085030402384",
+      "wm-target": "https://sophieswebsite1999.neocities.org/guestbook/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@sophieswebmentiondemo\" class=\"u-url\">@<span>sophieswebmentiondemo</span></a></span> test</p>",
+        "text": "@sophieswebmentiondemo test"
+      },
+      "mention-of": "https://sophieswebsite1999.neocities.org/guestbook/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    */
 async function fetchWebmentions() {
   const rsp = await fetch(mentionsUrl);
   const mentions = await rsp.json();
-  const replies = mentions.links.filter(
-    (mention) => mention.activity.type === "reply"
+  const replies = mentions.children.filter(
+    (mention) => mention["wm-property"] === "mention-of"
   );
-  const likes = mentions.links.filter(
-    (mention) => mention.activity.type === "like"
+  const likes = mentions.children.filter(
+    (mention) => mention["wm-property"] === "like-of"
   );
   const listItems = replies.map((webmention) => {
     return `<li>
-        <article class="webmention h-cite" id="webmention-${webmention.id}">
+        <article class="webmention h-cite" id="webmention-${
+          webmention["wm-id"]
+        }">
           <div class="webmention-meta">
             <a class="webmention-author p-author h-card u-url" href="${
-              webmention.data.url
+              webmention.url
             }" target="_blank" rel="noopener noreferrer">
-              <img class="u-photo" src="${webmention.data.author.photo}" alt="${
-      webmention.data.author.name
+              <img class="u-photo" src="${webmention.author.photo}" alt="${
+      webmention.author.name
     }">
-              <span class="p-name">${webmention.data.author.name}</span>
+              <span class="p-name">${webmention.author.name}</span>
             </a>
             <time class="webmention-pubdate dt-published" datetime="${
-              webmention.data.published
-            }">${new Date(webmention.data.published).toDateString()}</time>
+              webmention.published
+            }">${new Date(webmention.published).toDateString()}</time>
           </div>
           <div class="webmention__content p-content">
-            ${webmention.data.content}
+            ${webmention.content.text.replace("@sophieswebmentiondemo ", "")}
           </div>
       </article>
   </li>`;
